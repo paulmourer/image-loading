@@ -4,6 +4,7 @@ module.exports = {
     browser: true,
     node: true
   },
+
   parserOptions: {
     parser: '@babel/eslint-parser',
     requireConfigFile: false
@@ -16,5 +17,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "vue/multi-word-component-names": ["warn", {
+      "ignores": ["index"]
+    }]
+  }
 }
